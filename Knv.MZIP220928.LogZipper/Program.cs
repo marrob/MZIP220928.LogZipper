@@ -55,7 +55,7 @@ namespace Knv.MZIP220928.LogZipper
             var files = Directory.GetFiles(directory,"*.log");
             Console.WriteLine($"Total files: {files.Length} (*.log)");
             var dt = DateTime.Now;
-            var zipFileName = $"{Path.GetFileName(directory)}_{dt.Year:0000}{dt.Month:00}{dt.Day:00}_log";
+            var zipFileName = $"{Path.GetFileName(directory)}_{dt:yyyy}{dt:MM}{dt:dd}_log";
             var zipFilePath = $"{directory}\\{zipFileName}.zip";
             Console.WriteLine($"Zip File path:{zipFilePath}");
             Console.WriteLine($"\r\nZip is running... Please Wait");
